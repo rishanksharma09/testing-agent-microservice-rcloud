@@ -1,0 +1,19 @@
+application:
+  name: "rcloud-microservice-test"
+  mode: "microservices"
+
+agents:
+  - id: "echo-agent"
+    entrypoint: "agents/echo.py"
+  - id: "reverse-agent"
+    entrypoint: "agents/reverse.py"
+  - id: "uppercase-agent"
+    entrypoint: "agents/uppercase.py"
+
+routes:
+  execute: "/execute"
+  health: "/health"
+  metadata: "/metadata"
+
+environment:
+  - "PORT"
